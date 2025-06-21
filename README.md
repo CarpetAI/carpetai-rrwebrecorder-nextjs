@@ -1,6 +1,6 @@
 # @carpetai/rrweb-recorder-nextjs
 
-A Next.js wrapper for [@carpetai/rrweb-recorder](https://github.com/carpetai/rrweb-recorder).
+A Next.js wrapper for [@carpetai/rrweb-recorder](https://github.com/CarpetAI/carpetai-rrwebrecorder).
 
 ## Features
 
@@ -68,68 +68,15 @@ export default function MyComponent() {
 
 ## API Reference
 
-This package provides the exact same API as [@carpetai/rrweb-recorder](https://github.com/carpetai/rrweb-recorder), but with Next.js optimizations.
+This package provides the exact same API as [@carpetai/rrweb-recorder](https://github.com/CarpetAI/carpetai-rrwebrecorder), but with Next.js optimizations.
 
-### SessionRecorder Component
-
-```tsx
-import { SessionRecorder } from '@carpetai/rrweb-recorder-nextjs';
-
-<SessionRecorder 
-  apiKey="your-api-key"
-  excludePaths={['/admin', '/private']}
-  maxSessionDuration={15 * 60 * 1000} // 15 minutes
-  saveInterval={5000} // 5 seconds
-/>
-```
-
-### useSessionRecorder Hook
-
-```tsx
-import { useSessionRecorder } from '@carpetai/rrweb-recorder-nextjs';
-
-const { isRecording, sessionId, startRecording, stopRecording } = useSessionRecorder({
-  apiKey: "your-api-key",
-  autoStart: true
-});
-```
+For detailed API documentation, see the [main package](https://github.com/CarpetAI/carpetai-rrwebrecorder).
 
 ## Environment Variables
 
 ```env
 # .env.local
 NEXT_PUBLIC_SESSION_API_KEY=your-api-key-here
-NEXT_PUBLIC_API_URL=https://your-api.com/api/sessions
-```
-
-## Migration from @carpetai/rrweb-recorder
-
-If you're currently using the main package with a wrapper component:
-
-**Before:**
-```tsx
-// components/SessionRecorderWrapper.tsx
-'use client';
-import { SessionRecorder } from '@carpetai/rrweb-recorder';
-
-export default function SessionRecorderWrapper() {
-  return (
-    <SessionRecorder 
-      apiKey={process.env.NEXT_PUBLIC_SESSION_API_KEY}
-    />
-  );
-}
-```
-
-**After:**
-```tsx
-// Direct import - no wrapper needed!
-import { SessionRecorder } from '@carpetai/rrweb-recorder-nextjs';
-
-// Use directly in your layout or components
-<SessionRecorder 
-  apiKey={process.env.NEXT_PUBLIC_SESSION_API_KEY}
-/>
 ```
 
 ## Differences from Main Package
