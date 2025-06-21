@@ -58,5 +58,8 @@
   "homepage": "https://github.com/CarpetAI/carpetai-rrwebrecorder-nextjs#readme",
   "bugs": {
     "url": "https://github.com/CarpetAI/carpetai-rrwebrecorder-nextjs/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
