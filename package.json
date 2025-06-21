@@ -1,0 +1,62 @@
+{
+  "name": "@carpetai/rrweb-recorder-nextjs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Next.js wrapper for @carpetai/rrweb-recorder",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@carpetai/rrweb-recorder": "^1.1.0"
+  },
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^24.0.3",
+    "@types/react": "^18.0.0",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "rrweb",
+    "session-recording",
+    "react",
+    "nextjs",
+    "user-analytics",
+    "session-replay"
+  ],
+  "author": "CarpetAI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarpetAI/carpetai-rrwebrecorder-nextjs"
+  },
+  "homepage": "https://github.com/CarpetAI/carpetai-rrwebrecorder-nextjs#readme",
+  "bugs": {
+    "url": "https://github.com/CarpetAI/carpetai-rrwebrecorder-nextjs/issues"
+  }
+}
