@@ -1,28 +1,17 @@
 # @carpetai/rrweb-recorder-nextjs
 
-A Next.js wrapper for [@carpetai/rrweb-recorder](https://github.com/CarpetAI/carpetai-rrwebrecorder).
-
-## Features
-
-- 🚀 **Zero configuration** - No need to create wrapper components
-- ⚡ **Next.js optimized** - Built specifically for Next.js 13+ app router
-- 🎯 **Type-safe** - Full TypeScript support
-- 📦 **Lightweight** - Thin wrapper around the main package
+Next.js wrapper for @carpetai/rrweb-recorder with App Router support.
 
 ## Installation
 
 ```bash
-npm install @carpetai/rrweb-recorder-nextjs
-# or
-yarn add @carpetai/rrweb-recorder-nextjs
+npm install @carpetai/rrweb-recorder-nextjs @carpetai/rrweb-recorder
 ```
 
-## Quick Start
-
-### Basic Usage
+## Usage
 
 ```tsx
-// app/layout.tsx or any component
+// app/layout.tsx
 import { SessionRecorder } from '@carpetai/rrweb-recorder-nextjs';
 
 export default function RootLayout({
@@ -34,58 +23,27 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <SessionRecorder 
-          apiKey={process.env.NEXT_PUBLIC_SESSION_API_KEY}
-        />
+        <SessionRecorder apiKey={process.env.NEXT_PUBLIC_CARPETAI_API_KEY} />
       </body>
     </html>
   );
 }
 ```
 
-### Using the Hook
+That's it! The component automatically starts recording when mounted.
+
+## Types
+
+Import types directly from the core package:
 
 ```tsx
-// app/components/MyComponent.tsx
-import { useSessionRecorder } from '@carpetai/rrweb-recorder-nextjs';
-
-export default function MyComponent() {
-  const { isRecording, sessionId, startRecording, stopRecording } = useSessionRecorder({
-    apiKey: process.env.NEXT_PUBLIC_SESSION_API_KEY,
-    autoStart: false
-  });
-
-  return (
-    <div>
-      <p>Recording: {isRecording ? 'Yes' : 'No'}</p>
-      <p>Session ID: {sessionId}</p>
-      <button onClick={startRecording}>Start Recording</button>
-      <button onClick={stopRecording}>Stop Recording</button>
-    </div>
-  );
-}
+import type { SessionEvent, SessionData } from '@carpetai/rrweb-recorder';
 ```
 
 ## API Reference
 
-This package provides the exact same API as [@carpetai/rrweb-recorder](https://github.com/CarpetAI/carpetai-rrwebrecorder), but with Next.js optimizations.
-
-For detailed API documentation, see the [main package](https://github.com/CarpetAI/carpetai-rrwebrecorder).
-
-## Environment Variables
-
-```env
-# .env.local
-NEXT_PUBLIC_SESSION_API_KEY=your-api-key-here
-```
-
-## Differences from Main Package
-
-- ✅ **No `'use client'` wrapper required**
-- ✅ **Optimized for Next.js app router**
-- ✅ **Same API and functionality**
-- ✅ **Full TypeScript support**
+For detailed API documentation, see the [core package](https://github.com/CarpetAI/carpetai-rrwebrecorder).
 
 ## License
 
-MIT - see the main package for details. 
+MIT 
