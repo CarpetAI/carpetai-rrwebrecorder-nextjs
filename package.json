@@ -23,7 +23,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@carpetai/rrweb-recorder": "^1.1.0"
+    "@carpetai/rrweb-recorder": "^1.1.4"
   },
   "peerDependencies": {
     "next": ">=13.0.0",
