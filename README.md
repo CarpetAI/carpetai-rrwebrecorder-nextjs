@@ -5,7 +5,7 @@ Next.js wrapper for @carpetai/rrweb-recorder with App Router support.
 ## Installation
 
 ```bash
-npm install @carpetai/rrweb-recorder-nextjs @carpetai/rrweb-recorder
+npm install @carpetai/rrweb-recorder-nextjs @carpetai/rrweb-recorder rrweb
 ```
 
 ## Usage
