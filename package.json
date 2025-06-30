@@ -1,6 +1,6 @@
 {
   "name": "@carpetai/rrweb-recorder-nextjs",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "description": "Next.js wrapper for @carpetai/rrweb-recorder",
   "main": "dist/index.js",
