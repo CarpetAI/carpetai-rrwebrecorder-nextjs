@@ -1,6 +1,6 @@
 {
   "name": "@carpetai/rrweb-recorder-nextjs",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "type": "module",
   "description": "Next.js wrapper for @carpetai/rrweb-recorder",
   "main": "dist/index.js",
@@ -22,7 +22,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@carpetai/rrweb-recorder": "^1.4.0"
+    "@carpetai/rrweb-recorder": "^1.4.1"
   },
   "peerDependencies": {
     "next": ">=13.0.0",
