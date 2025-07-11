@@ -8,6 +8,12 @@ Next.js wrapper for @carpetai/rrweb-recorder with App Router support.
 npm install @carpetai/rrweb-recorder-nextjs @carpetai/rrweb-recorder rrweb
 ```
 
+## Demo
+
+Watch a demo of the session recorder in action:
+
+[![Session Recorder Demo](https://img.youtube.com/vi/ZXLdtYngS7A/0.jpg)](https://youtu.be/ZXLdtYngS7A)
+
 ## Usage
 
 ```tsx
